@@ -81,7 +81,7 @@ app.get("/scrape", function (req, res) {
         .then( dbArticle =>  {
           // View the added result in the console
           console.log(dbArticle);
-          res.render("index", {this: title});
+          res.redirect("/articles");
         })
         .catch(function (err) {
           // If an error occurred, log it
